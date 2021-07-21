@@ -1,0 +1,78 @@
+.errors-container {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	max-height: 100vh;
+	max-width: 320px;
+	width: 100%;
+	padding: 0 15px;
+	overflow-y: auto;
+	display: flex;
+	flex-wrap: wrap;
+	overflow-x: hidden;
+}
+
+.errors-container .error-toast {
+	align-self: flex-end;
+	margin-bottom: 15px;
+	overflow: hidden;
+	width: 100%;
+	font-family: sans-serif;
+	line-height: 1.5;
+	background-color: #c62828;
+	color: white;
+	border-radius: 8px;
+	-webkit-animation: show_toast 0.2s linear 1 alternate both, delete_toast 0.2s linear 5s 1 alternate both;
+	animation: show_toast 0.2s linear 1 alternate both, delete_toast 0.2s linear 5s 1 alternate both;
+}
+
+.errors-container .error-toast .error-progress {
+	background-color: #9c1f1f;
+	height: 4px;
+	transition: all 0.1s linear;
+}
+
+.errors-container .error-toast .error-text {
+	padding: 10px;
+	font-size: 14px;
+}
+
+@-webkit-keyframes show_toast {
+	from {
+		transform: translatex(100%);
+	}
+
+	to {
+		transform: translatex(0%);
+	}
+}
+
+@keyframes show_toast {
+	from {
+		transform: translatex(100%);
+	}
+
+	to {
+		transform: translatex(0%);
+	}
+}
+
+@-webkit-keyframes delete_toast {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes delete_toast {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
