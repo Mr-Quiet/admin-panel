@@ -89,7 +89,10 @@
 	&__smart-search {
 		display: none;
 		margin: 25px 0;
-
+		&.controls-container {
+			display: flex;
+			align-items: center;
+		}
 		h4 {
 			font-size: 30px;
 			line-height: 25px;
@@ -110,10 +113,16 @@
 				line-height: 25px;
 			}
 		}
+		button {
+			width: 60px;
+			height: 52px;
+			background: url("../img/icons/search.svg") center/45% 45% no-repeat #3399cc;
+			margin: 0 0 0 10px;
+			border-radius: 5px;
+		}
 
 		@media screen and (max-width:992px) {
 			display: block;
-
 		}
 	}
 

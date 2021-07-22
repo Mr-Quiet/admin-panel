@@ -1154,6 +1154,15 @@ table {
   margin: 25px 0;
 }
 
+.btn__smart-search.controls-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .btn__smart-search h4 {
   font-size: 30px;
   line-height: 25px;
@@ -1188,6 +1197,14 @@ table {
 .btn__smart-search input::placeholder {
   font-size: 18px;
   line-height: 25px;
+}
+
+.btn__smart-search button {
+  width: 60px;
+  height: 52px;
+  background: url("../img/icons/search.svg") center/45% 45% no-repeat #3399cc;
+  margin: 0 0 0 10px;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 992px) {

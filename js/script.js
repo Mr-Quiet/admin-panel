@@ -28,7 +28,7 @@ let formEdit_name = document.querySelector(" .modal-window__edit-record .form__c
 	formAdd_date = document.querySelector(".modal-window__add-record .form__content .form__body form .form__elements-group-2 fieldset input[type='date']");
 
 function validName() {
-	let regName = /^[A-Z][a-z]{2,}\s[A-Z][a-z]{2,}$/g;
+	let regName = /[A-Z]{1}[a-z]+( |-|\/|\.|\. )(([A-Z]{1}[a-z]+ [A-Z]{1}[a-z]+)|([A-Z]{1}[a-z]+))/g;
 	if (formEdit_name.value != "" && formEdit_name.value == formEdit_name.value.match(regName) || formAdd_name.value != "" && formAdd_name.value == formAdd_name.value.match(regName)) {
 		return true;
 	} else {
@@ -37,8 +37,8 @@ function validName() {
 }
 
 function validURL() {
-	let regURL = /^[https]{1,5}\:\/{2,2}[orcid]{1,5}\.[org]{1,3}\/$/g;
-	if (formEdit_url.value != "" && formEdit_url.value == formEdit_url.value.match(regURL) || formAdd_url.value != "" && formAdd_url.value == formAdd_url.value.match(regURL)) {
+	let regURL = /(http\:\/\/orcid.org\/)|(https\:\/\/orcid.org\/)*.?/g;
+	if (regURL.test(formEdit_url.value)) {
 		return true;
 	} else {
 		return false;
